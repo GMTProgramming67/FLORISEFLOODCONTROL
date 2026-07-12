@@ -60,7 +60,7 @@ void loop() {
     velocity = diff / (interval / 1000.0);
 
     float estimatedTime = 0;
-    if (velocity > 0.1) estimatedTime = distanceB / velocity;
+    if (velocity > 0.1) estimatedTime = (maxd -distanceB) / velocity;
     else estimatedTime = 0;
 
     showOLED(distanceB, velocity, estimatedTime);
